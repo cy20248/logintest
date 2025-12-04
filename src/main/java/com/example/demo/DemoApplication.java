@@ -38,7 +38,7 @@ public class DemoApplication implements CommandLineRunner {
 				User admin = new User();
 				admin.setUsername("admin");
 				admin.setPassword(encoder.encode("password")); // 平文 password をハッシュ化
-				admin.setRole("ROLE_ADMIN");
+				admin.setRole("ADMIN");
 				userRepository.save(admin);
 			}
 
@@ -46,7 +46,7 @@ public class DemoApplication implements CommandLineRunner {
 				User user = new User();
 				user.setUsername("user");
 				user.setPassword(encoder.encode("password")); // 平文 password をハッシュ化
-				user.setRole("ROLE_USER");
+				user.setRole("USER");
 				userRepository.save(user);
 			}
 		};
